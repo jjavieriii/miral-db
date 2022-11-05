@@ -85,7 +85,7 @@ class User extends BaseModel {
         }else{
 
           if (order) {
-            qb.orderBy(order.key,order.by); 
+            qb.orderBy( ABS(order.key), order.by); 
           }else{
             qb.orderBy('name','ASC'); 
           }
